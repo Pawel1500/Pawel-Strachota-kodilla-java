@@ -1,8 +1,8 @@
 package com.kodilla.testing.shape;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.*;
+
+import java.util.ArrayList;
 
 public class ShapeCollectorTestSuite {
 
@@ -24,15 +24,113 @@ public class ShapeCollectorTestSuite {
         System.out.println("Preparing to execute test #" + testCounter);
     }
 
-    public void addFigure(Shape shape){
-        //Given
 
+    @Test
+    public void addFigure() {
+//given
+        ArrayList<String> numbers = new ArrayList<String>();
+//
+//        int i;
+//        for (i = 0; i < 3; i++) //usunac
+//            if (i % 3 == 0) {
+        //when
+                numbers.add(Circle.getNameCircle());
+//            } else if (i % 3 == 1) {
 
-        //When
-        forumUser.addPost("mrsmith",
-                "Hello everyone, this is my first contribution here!");
+                numbers.add(Square.getNameSquare());
+ //           } else if (i % 3 == 2) {
 
-        //Then
-        Assert.assertEquals(1, forumUser.getPostsQuantity());
+                numbers.add(Triangle.getNameTriangle());
+ //           }
+ //       Integer large = 3;
+        //then
+        Assert.assertEquals(3, numbers.size());
+  //      if (numbers.size() == large) {
+  // /         System.out.println("Test OK");
+  //      } else {
+  //          System.out.println("Test False");
+  //      }
     }
+
+    @Test
+    public void removeFigure() {
+
+
+//given
+        ArrayList<String> numbers = new ArrayList<String>();
+
+
+        int i;
+        for (i = 0; i < 3; i++)
+            if (i % 3 == 0) {
+                numbers.add(Circle.getNameCircle());
+            } else if (i % 3 == 1) {
+
+                numbers.add(Square.getNameSquare());
+            } else if (i % 3 == 2) {
+
+                numbers.add(Triangle.getNameTriangle());
+            }
+//when
+        numbers.remove("Triangle");
+//then
+    Assert.assertEquals(i - 1, numbers.size());
+        if (numbers.size() < i) {
+            System.out.println("Test OK");
+        } else {
+            System.out.println("Test False");
+        }
+    }
+
+    @Test
+    public void getFigure() {
+
+
+//given
+        ArrayList<String> numbers = new ArrayList<String>();
+
+
+
+
+        int i;
+        for (i = 0; i < 3; i++)
+            if (i % 3 == 0) {
+                numbers.add(Circle.getNameCircle());
+            } else if (i % 3 == 1) {
+
+                numbers.add(Square.getNameSquare());
+            } else if (i % 3 == 2) {
+
+                numbers.add(Triangle.getNameTriangle());
+            }
+
+        String name = "Triangle";
+//when
+        String actual = numbers.get(2);
+//then
+        Assert.assertEquals(name, actual);
+        if (numbers.get(2) == name) {
+            System.out.println("Test OK");
+        } else {
+            System.out.println("Test False");
+        }
+    }
+
+    @Test
+    public void showFigure() {
+
+        //when
+        Square.getPoleSquare();
+        //noExceptionThrown
+
+        //if (true) {
+        //   System.out.println("Test OK");
+        //} else {
+        //    System.out.println("Test False");
+       //}
+    }
+
+
 }
+
+

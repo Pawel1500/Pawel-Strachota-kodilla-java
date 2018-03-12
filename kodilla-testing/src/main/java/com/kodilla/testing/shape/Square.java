@@ -1,9 +1,9 @@
 package com.kodilla.testing.shape;
 
 public class Square implements Shape {
-    double aSquare;
-    double poleSquare;
-    private String nameSquare = "Square";
+    private static double aSquare;
+    private static double poleSquare;
+    private static String nameSquare = "Square";
 
     public Square(double aSquare, double poleSquare, String nameSquare) {
         this.aSquare = aSquare;
@@ -15,11 +15,11 @@ public class Square implements Shape {
         return aSquare;
     }
 
-    public double getPoleSquare() {
+    public static double getPoleSquare() {
         return poleSquare = aSquare*aSquare;
     }
 
-    public String getNameSquare() {
+    public static String getNameSquare() {
         return nameSquare;
     }
 
@@ -30,7 +30,7 @@ public class Square implements Shape {
 
     @Override
     public void getField() {
-           System.out.print("Pole Square =" + poleSquare);
+           System.out.print("Pole Square =" + getPoleSquare());
 
     }
 }

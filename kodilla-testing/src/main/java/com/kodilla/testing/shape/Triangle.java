@@ -5,14 +5,14 @@ public class Triangle implements  Shape {
     double aTriangle;
     double bTriangle;
     double poleTriangle;
-    private String nameTrangle = "Triangle";
+    private static String nameTriangle = "Triangle";
 
 
     public Triangle(double aTriangle, double bTriangle, double poleTriangle, String nameTrangle) {
         this.aTriangle = aTriangle;
         this.bTriangle = bTriangle;
         this.poleTriangle = poleTriangle;
-        this.nameTrangle = nameTrangle;
+        this.nameTriangle = nameTrangle;
     }
 
     public double getaTriangle() {
@@ -27,14 +27,14 @@ public class Triangle implements  Shape {
         return poleTriangle = aTriangle*bTriangle*0.5;
     }
 
-    public String getNameTrangle() {
-        return nameTrangle;
+    public static String getNameTriangle() {
+        return nameTriangle;
     }
 
     @Override
 
     public void getShapeName() {
-        System.out.print(getNameTrangle());
+        System.out.print(getNameTriangle());
     }
 
     @Override

@@ -3,7 +3,7 @@ package com.kodilla.testing.shape;
 public class Circle implements Shape {
     private  double rCircle;
     private double poleCircle;
-    private String nameCircle = "Circle";
+    private static String nameCircle = "Circle";
 
     public Circle(double rCircle, double poleCircle, String nameCircle) {
         this.rCircle = rCircle;
@@ -16,10 +16,11 @@ public class Circle implements Shape {
     }
 
     public double getPoleCircle() {
+
         return poleCircle = rCircle*rCircle*3.14;
     }
 
-    public String getNameCircle() {
+    public static String getNameCircle() {
         return nameCircle;
     }
 
@@ -33,4 +34,6 @@ public class Circle implements Shape {
         System.out.print("Pole Circle ="+ poleCircle);
 
     }
+
+
 }
